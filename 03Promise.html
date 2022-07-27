@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  const p = new Promise((resolve, reject) => {
+
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', 'https://api.apiopen.top/getjoke')
+    xhr.send()
+    xhr.onreadystatechange = () => {
+
+      if (xhr.readyState === 4) {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          resolve(xhr.responseText)
+        } else {
+          reject(xhr.statusText)
+        }
+      }
+
+    }
+
+  })
+
+  p.then(value => console.log(value), reason => console.log(reason))
+
+</script>
+</html>
