@@ -2,8 +2,7 @@
 /*export const name = 'akokko'
 export function f() {
     console.log('We can change you!')
-}
-*/
+}*/
 
 //统一暴露
 /*const name = 'akokko'
@@ -19,9 +18,9 @@ function f() {
 }
 export default {name, f}*/
 
-/*export default {
+export default {
     name: 'akokko',
     f: () => {
         console.log('We can change you!')
     }
-}*/
+}
